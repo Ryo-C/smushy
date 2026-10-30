@@ -141,7 +141,7 @@ export function StoryScreen() {
         ListHeaderComponent={
           throwback ? (
             <StoryThrowbackCard throwback={throwback} onPress={handleMomentPress} />
-          ) : null
+          ) : undefined
         }
         stickySectionHeadersEnabled={false}
         showsVerticalScrollIndicator={false}

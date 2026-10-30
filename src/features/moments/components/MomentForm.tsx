@@ -1,5 +1,12 @@
 import React, { useState, useRef, useEffect } from 'react';
-import { View, TextInput, Switch, Pressable, ScrollView } from 'react-native';
+import {
+  View,
+  TextInput,
+  Switch,
+  Pressable,
+  ScrollView,
+  type TextInputInstance,
+} from 'react-native';
 import { Image } from '@/shared/components/ui/Image';
 import Animated, {
   useSharedValue,
@@ -53,9 +60,9 @@ export const MomentForm: React.FC<MomentFormProps> = ({
   const { currentTheme } = useTheme();
   const { colors } = currentTheme;
 
-  const descriptionRef = useRef<TextInput>(null);
-  const locationRef = useRef<TextInput>(null);
-  const tagsRef = useRef<TextInput>(null);
+  const descriptionRef = useRef<TextInputInstance>(null);
+  const locationRef = useRef<TextInputInstance>(null);
+  const tagsRef = useRef<TextInputInstance>(null);
 
   const [focusStates, setFocusStates] = useState({
     title: false,

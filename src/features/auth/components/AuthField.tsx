@@ -1,5 +1,10 @@
 import React, { forwardRef, useState } from 'react';
-import { View, TextInput, type TextInputProps } from 'react-native';
+import {
+  View,
+  TextInput,
+  type TextInputProps,
+  type TextInputInstance,
+} from 'react-native';
 import { Feather, Ionicons } from '@expo/vector-icons';
 
 import { Text } from '@/shared/components/ui/Text';
@@ -14,7 +19,7 @@ interface AuthFieldProps extends TextInputProps {
   accessory?: { label: string; onPress: () => void };
 }
 
-export const AuthField = forwardRef<TextInput, AuthFieldProps>(
+export const AuthField = forwardRef<TextInputInstance, AuthFieldProps>(
   ({ error, secure = false, accessory, style, onFocus, onBlur, ...props }, ref) => {
     const { currentTheme } = useTheme();
     const { colors } = currentTheme;

@@ -101,7 +101,7 @@ Use the [Documentation Ownership table](#-documentation-ownership-single-source-
 ## Tech Stack
 
 **Core:**
-- Expo (~54.0.0) + React Native (0.81.5) + TypeScript (strict mode)
+- Expo SDK 58 (~58.0.21) + React Native (0.88.1) + TypeScript 6 (strict mode)
 - Expo Router (file-based routing with type safety)
 
 **UI & Styling:**
@@ -144,7 +144,7 @@ The app automatically selects mock or backend repositories based on the environm
 For quick start, see [README.md](README.md).
 For detailed setup instructions, see [docs/guides/SETUP.md](docs/guides/SETUP.md).
 
-**Prerequisites:** Node.js 18+, Expo CLI, iOS/Android dev tools
+**Prerequisites:** Node.js 22.13+ (`nvm use` reads `.nvmrc`), Expo Go for SDK 58, iOS/Android dev tools
 **Key command:** `npx expo start`
 
 ---

@@ -4,11 +4,16 @@
 
 You've successfully scaffolded the Smushy project! Here's what to do next:
 
-### 1. Install Dependencies
+### 1. Use Node 22 and Install Dependencies
+
+Expo SDK 58 needs Node.js 22.13 or newer. The repo has an `.nvmrc`, so with nvm:
 
 ```bash
+nvm use
 npm install
 ```
+
+On a physical device, install **Expo Go for SDK 58**.
 
 ### 2. Set Up Environment Variables
 

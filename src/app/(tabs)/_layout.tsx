@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import { Tabs, useRouter } from 'expo-router';
 import { View } from 'react-native';
-import { BottomTabBarProps } from '@react-navigation/bottom-tabs';
+import type { BottomTabBarProps } from 'expo-router/tabs';
 import { Ionicons } from '@expo/vector-icons';
 
 import { TabBar, TabBarItem, TabBarFAB } from '@/shared/components/navigation/TabBar';
@@ -15,6 +15,8 @@ type TabConfig = {
   label: string;
 };
 
+export const unstable_settings = { anchor: 'moments' };
+
 const TAB_CONFIG: Record<string, TabConfig> = {
   moments: { icon: 'heart', label: 'Moments' },
   story: { icon: 'time', label: 'Story' },
@@ -25,7 +27,7 @@ const TAB_CONFIG: Record<string, TabConfig> = {
 const LEFT_TABS = ['moments', 'story'];
 const RIGHT_TABS = ['rituals', 'profile'];
 
-function CustomTabBar({ state, navigation }: BottomTabBarProps) {
+function CustomTabBar({ state, emitter, navigateToTab }: BottomTabBarProps) {
   const router = useRouter();
   const [menuOpen, setMenuOpen] = useState(false);
 
@@ -66,14 +68,14 @@ function CustomTabBar({ state, navigation }: BottomTabBarProps) {
     if (!config) return null;
 
     const onPress = (): void => {
-      const event = navigation.emit({
+      const event = emitter.emit({
         type: 'tabPress',
         target: route.key,
         canPreventDefault: true,
       });
 
       if (!isFocused && !event.defaultPrevented) {
-        navigation.navigate(routeName);
+        navigateToTab(route.key);
       }
     };
 
@@ -109,7 +111,6 @@ function CustomTabBar({ state, navigation }: BottomTabBarProps) {
 export default function TabLayout() {
   return (
     <Tabs
-      initialRouteName="moments"
       screenOptions={{
         headerShown: false,
       }}

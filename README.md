@@ -20,10 +20,13 @@ A calm relationship app for couples: shared moments, a photo timeline, rituals a
 
 ## Try it in two minutes (mock mode)
 
+Needs **Node.js 22.13+** (there's an `.nvmrc`, so `nvm use` picks it) and, on a phone, **Expo Go for SDK 58**.
+
 ```bash
+nvm use
 npm install
 cp .env.example .env
-npm run ios:mock        # or: npm run android:mock
+npm run ios:mock        # or: npm run android:mock, or npm run start:mock and scan the QR code
 ```
 
 Mock mode runs entirely on the device and signs you in as Ryo automatically. Log out from Profile to try another account. Every demo account uses the password `password123`.
@@ -40,7 +43,7 @@ Seed photos load from Unsplash, so the demo needs an internet connection.
 
 ## What's inside
 
-- **Expo SDK 54, React Native 0.81** with the New Architecture, **TypeScript** in strict mode
+- **Expo SDK 58, React Native 0.88** with the New Architecture, **TypeScript 6** in strict mode
 - **Expo Router** for file-based navigation; **NativeWind**, **Reanimated** and **FlashList** for UI
 - **TanStack Query** for server data, **Zustand** for app state
 - **Repository pattern with dependency injection:** every feature has a backend and a mock implementation, switched by one environment variable

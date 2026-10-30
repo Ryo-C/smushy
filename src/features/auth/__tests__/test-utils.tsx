@@ -180,7 +180,7 @@ export function createTestWrapper(options: TestWrapperOptions = {}) {
  * Helper to wait for TanStack Query to settle.
  */
 export async function waitForQuery() {
-  return new Promise((resolve) => setTimeout(resolve, 0));
+  return new Promise<void>((resolve) => setTimeout(() => resolve(), 0));
 }
 
 /**

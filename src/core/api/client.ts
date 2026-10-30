@@ -146,7 +146,7 @@ async function request<T>(
 
       if (shouldRetryError(error) && attempt < MAX_RETRIES - 1) {
         const delay = BASE_RETRY_DELAY * Math.pow(2, attempt);
-        await new Promise((resolve) => setTimeout(resolve, delay));
+        await new Promise<void>((resolve) => setTimeout(() => resolve(), delay));
 
         attempt++;
         continue;

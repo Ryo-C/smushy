@@ -1,5 +1,5 @@
 import React, { useRef, useState } from 'react';
-import { TextInput } from 'react-native';
+import { type TextInputInstance } from 'react-native';
 import { useRouter } from 'expo-router';
 import * as Haptics from 'expo-haptics';
 
@@ -17,7 +17,7 @@ export function LoginForm() {
   const router = useRouter();
   const { currentTheme } = useTheme();
   const { colors } = currentTheme;
-  const passwordRef = useRef<TextInput>(null);
+  const passwordRef = useRef<TextInputInstance>(null);
 
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');

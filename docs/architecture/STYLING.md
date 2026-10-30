@@ -41,6 +41,7 @@ import { Text } from '@/shared/components';
 
 - **`Screen`** (`src/shared/components/layout/Screen.tsx`) owns the soft background wash. Don't add a `LinearGradient` per screen; pass `plain` to opt out.
 - **`ScreenHeader`**: `largeTitle` for tab roots (left-aligned, no background), compact otherwise (centered title, hairline divider). No looping or decorative animation.
+- **`BottomSheet`** (`src/shared/components/ui/BottomSheet.tsx`): calm slide-up sheet with swipe-down and tap-above to close, used by the Add menu and Moments filters. Swipe uses Gesture Handler 3's `usePanGesture` (the old `Gesture.Pan()` builder is deprecated).
 - **`PressableScale`** (`src/shared/components/ui/PressableScale.tsx`) is the default for anything tappable: scale to ~0.97 + slight fade on press, spring back on release, optional `haptic="light" | "selection"`. Respects reduced motion. Keep `scaleTo` close to 1; feedback should be felt, not seen.
 - NativeWind interop is registered on `PressableScale`'s plain inner component, not on the Reanimated component. Registering the animated component directly drops both `className` and `style`.
 
@@ -242,4 +243,4 @@ export default function RootLayout() {
 - **Styles not applying:** Ensure `metro.config.js` has `withNativeWind()`
 - **Fonts look small:** Check `inlineRem: 16` is set
 - **After setup changes:** Clear cache with `npx expo start --clear`
-- **Version requirement:** NativeWind v4.2.0+ for Expo SDK 54 + Reanimated v4
+- **Version requirement:** NativeWind v4.2.7+ for Expo SDK 58 + Reanimated 4.7

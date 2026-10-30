@@ -66,6 +66,7 @@
 ## Recent Changes (Last 7 Days)
 
 ### Completed
+- ✅ 2026-10-31 - **Expo SDK 58 upgrade** - SDK 54 → 58 (React Native 0.88, React 19.3, Reanimated 4.7, Gesture Handler 3, Expo Router 58, TypeScript 6, Jest 30). Requires Node 22.13+ (`.nvmrc`). Migrated the tab bar to Expo Router 58's props and `unstable_settings.anchor`, `TextInput` refs to `TextInputInstance`, the sheet swipe to `usePanGesture`, and the Jest preset to `@react-native/jest-preset`. Edit flows for rituals, check-ins and profile; ritual icons; Coral / Serene / Forest themes; blank-slate demo accounts.
 - ✅ 2026-10-30 - **Demo build** - Every tab works in mock mode. Fixed the splash hang (no route matched `/`), sign-in/out navigation (`Stack.Protected`) and logout (wrong storage key + cached session). Built Story (derived timeline with year filter and sort), Rituals (next occurrence, done/pause), Check-ins (private by default, mood + share) and Profile (couple card, nudges, theme). Moments gained search and an Any time / Upcoming / Past filter; filters are now part of the query key. Images render via a shared `Image` (NativeWind interop). New base layout: `Screen` background, clean `ScreenHeader` and tab bar, shared `PressableScale` press feedback. Mock data rewritten (Ryo & Roline, Singapore context, verified Unsplash photos) with `SEED_VERSION` reseeding. Comment bloat removed.
 - ✅ 2026-01-05 - **Moments Feature Design & UI** - Complete feature design with purpose, user stories, and MVP scope. Built all UI components (MomentCard, MomentForm, MomentTypeSelector, MomentFilterBar) and screens (List, Detail, Create, Edit). Connected all routes using Expo Router file-based routing with nested stacks.
 - ✅ 2026-01-04 - **NativeWind v4 Fix** - Fixed NativeWind styles not applying on Android. Root cause: missing `metro.config.js` with `withNativeWind()` wrapper. Upgraded NativeWind to v4.2.1 for Expo SDK 54 + Reanimated v4 compatibility.
@@ -118,7 +119,7 @@ _To be updated as features are planned_
 - **Memory Usage:** -
 
 ### Recent Test Results
-- **Unit Tests:** ✅ All passing (227/227 across 10 test suites, 2026-10-30)
+- **Unit Tests:** ✅ All passing (229/229 across 10 test suites, 2026-10-31, SDK 58)
 - **Coverage:** Auth repositories (97%), hooks (95%), utilities (100%), screens (90%)
 - **E2E Tests:** Planned for future sprints
 

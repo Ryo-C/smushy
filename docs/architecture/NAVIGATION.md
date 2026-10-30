@@ -36,6 +36,8 @@ Smushy uses **Expo Router** with file-based routing for type-safe, intuitive nav
 
 > **Auth switching:** the root `Stack` wraps `(auth)` and `(tabs)` in `Stack.Protected` guards. Conditionally rendering `<Stack.Screen>`s does not work in Expo Router (every route file is registered anyway), so flipping `isAuthenticated` would not navigate.
 
+> **Tabs (Expo Router 58):** set the default tab with `export const unstable_settings = { anchor: 'moments' }` in `(tabs)/_layout.tsx`; `<Tabs>` no longer accepts `initialRouteName`. A custom `tabBar` receives `emitter` and `navigateToTab(routeKey)` instead of `navigation`, and its types come from `expo-router/tabs`.
+
 > ⚠️ **A route must match `/`.** Groups like `(tabs)` and `(auth)` don't add a URL segment, so `(tabs)/moments/index.tsx` is `/moments`, not `/`. If nothing matches `/`, Expo Router renders `+not-found` *outside* the root layout. `RootLayout` then never mounts, `SplashScreen.hideAsync()` never runs, and the app hangs on the splash screen. `src/app/index.tsx` exists to prevent this.
 
 ## Route Components (Thin Pattern)

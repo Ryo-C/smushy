@@ -2,9 +2,9 @@ import React, { useCallback, useEffect, useRef } from 'react';
 import { Modal, Pressable, StyleSheet, View } from 'react-native';
 import { useSafeAreaInsets } from 'react-native-safe-area-context';
 import {
-  Gesture,
   GestureDetector,
   GestureHandlerRootView,
+  usePanGesture,
 } from 'react-native-gesture-handler';
 import Animated, {
   Easing,
@@ -75,13 +75,15 @@ export function BottomSheet({ visible, onClose, title, children }: BottomSheetPr
     [closeDuration, finishClose, sheetHeight, translateY]
   );
 
-  const pan = Gesture.Pan()
-    .activeOffsetY(8)
-    .failOffsetX([-20, 20])
-    .onUpdate((event) => {
+  const pan = usePanGesture({
+    activeOffsetY: 8,
+    failOffsetX: [-20, 20],
+    onUpdate: (event) => {
+      'worklet';
       translateY.value = Math.max(0, event.translationY);
-    })
-    .onEnd((event) => {
+    },
+    onDeactivate: (event) => {
+      'worklet';
       const shouldClose =
         event.translationY > sheetHeight.value * 0.3 || event.velocityY > 900;
       if (shouldClose) {
@@ -95,7 +97,8 @@ export function BottomSheet({ visible, onClose, title, children }: BottomSheetPr
       } else {
         translateY.value = withTiming(0, { duration: 220, easing: EASE_OUT });
       }
-    });
+    },
+  });
 
   const sheetStyle = useAnimatedStyle(() => ({
     transform: [{ translateY: translateY.value }],
