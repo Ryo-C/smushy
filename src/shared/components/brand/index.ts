@@ -1,0 +1,1 @@
+export { SmushyLogo } from './SmushyLogo';

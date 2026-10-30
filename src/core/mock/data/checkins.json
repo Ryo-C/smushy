@@ -1,0 +1,110 @@
+[
+  {
+    "id": "checkin-1",
+    "user_id": "user-roline",
+    "content": "Work's been rough. Thank you for doing dinner every night this week without me asking.",
+    "mood": "good",
+    "is_shared": true,
+    "shared_at": "2024-05-20T21:15:00Z",
+    "partner_viewed": true,
+    "created_at": "2024-05-20T21:00:00Z",
+    "updated_at": "2024-05-20T21:15:00Z"
+  },
+  {
+    "id": "checkin-2",
+    "user_id": "user-ryo",
+    "content": "Good week. The Sunday market thing is my favourite part of it.",
+    "mood": "great",
+    "is_shared": true,
+    "shared_at": "2024-10-27T22:00:00Z",
+    "partner_viewed": true,
+    "created_at": "2024-10-27T21:45:00Z",
+    "updated_at": "2024-10-27T22:00:00Z"
+  },
+  {
+    "id": "checkin-3",
+    "user_id": "user-ryo",
+    "content": "Work's been a lot. Thanks for giving me last night to myself, it was exactly what I needed.",
+    "mood": "stressed",
+    "is_shared": true,
+    "shared_at": "2024-06-12T20:15:00Z",
+    "partner_viewed": true,
+    "created_at": "2024-06-12T20:00:00Z",
+    "updated_at": "2024-06-12T20:15:00Z"
+  },
+  {
+    "id": "checkin-4",
+    "user_id": "user-roline",
+    "content": "Bad day. The chicken rice you dabao-ed fixed most of it.",
+    "mood": "okay",
+    "is_shared": true,
+    "shared_at": "2024-08-14T19:45:00Z",
+    "partner_viewed": true,
+    "created_at": "2024-08-14T19:30:00Z",
+    "updated_at": "2024-08-14T19:45:00Z"
+  },
+  {
+    "id": "checkin-5",
+    "user_id": "user-ryo",
+    "content": "Glad we finally sat down with the reno budget. Went better than I expected.",
+    "mood": "great",
+    "is_shared": true,
+    "shared_at": "2024-07-02T21:00:00Z",
+    "partner_viewed": true,
+    "created_at": "2024-07-02T20:45:00Z",
+    "updated_at": "2024-07-02T21:00:00Z"
+  },
+  {
+    "id": "checkin-6",
+    "user_id": "user-roline",
+    "content": "Year-end gatherings with both families coming up. Already tired. Stick close to me?",
+    "mood": "okay",
+    "is_shared": true,
+    "shared_at": "2024-11-05T18:00:00Z",
+    "partner_viewed": true,
+    "created_at": "2024-11-05T17:45:00Z",
+    "updated_at": "2024-11-05T18:00:00Z"
+  },
+  {
+    "id": "checkin-7",
+    "user_id": "user-ryo",
+    "content": "Looked back at the year. New flat, a cat, and we didn't kill each other. Solid.",
+    "mood": "great",
+    "is_shared": true,
+    "shared_at": "2024-12-28T22:30:00Z",
+    "partner_viewed": true,
+    "created_at": "2024-12-28T22:15:00Z",
+    "updated_at": "2024-12-28T22:30:00Z"
+  },
+  {
+    "id": "checkin-8",
+    "user_id": "user-roline",
+    "content": "Good start to the year. Feeling settled.",
+    "mood": "great",
+    "is_shared": true,
+    "shared_at": "2024-01-02T10:00:00Z",
+    "partner_viewed": false,
+    "created_at": "2024-01-02T09:45:00Z",
+    "updated_at": "2024-01-02T10:00:00Z"
+  },
+  {
+    "id": "checkin-9",
+    "user_id": "user-ryo",
+    "content": "You laughed at something dumb I said at dinner and I thought, yeah, I'm doing alright.",
+    "mood": "great",
+    "is_shared": false,
+    "partner_viewed": false,
+    "created_at": "2026-01-01T15:30:00Z",
+    "updated_at": "2026-01-01T15:30:00Z"
+  },
+  {
+    "id": "checkin-10",
+    "user_id": "user-roline",
+    "content": "Too much on my plate planning the trip. Writing it down so I stop thinking about it.",
+    "mood": "okay",
+    "is_shared": false,
+    "partner_viewed": false,
+    "created_at": "2026-01-02T20:00:00Z",
+    "updated_at": "2026-01-02T20:00:00Z"
+  }
+]
